@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class GrassPokemon extends Pokemon{
+public class GrassPokemon extends Pokemon {
     private static final String type = "grass";
     List<String> attacks = Arrays.asList("leafStorm", "leaveBlade", "solarBeam", "leechSeed");
 
@@ -10,79 +10,91 @@ public class GrassPokemon extends Pokemon{
     }
 
     public void leafStorm(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName());
+        System.out.println(pokemon.getName() + " uses leafstorm on " + gymPokemon.getName());
         switch (gymPokemon.getType()) {
             case "electric":
-                gymPokemon.setHp(getHp() - 25);
-                System.out.println(gymPokemon.getName() + " loses 20 hp");
+                gymPokemon.setHp(gymPokemon.getHp() - 25);
+                System.out.println(gymPokemon.getName() + " loses 25 hp");
+                break;
             case "fire":
-                gymPokemon.setHp(getHp() - 15);
+                gymPokemon.setHp(gymPokemon.getHp() - 15);
                 System.out.println(gymPokemon.getName() + " loses 15 hp");
+                break;
             case "water":
-                gymPokemon.setHp(getHp() - 10);
+                gymPokemon.setHp(gymPokemon.getHp() - 10);
                 System.out.println(gymPokemon.getName() + " loses 10 hp");
+                break;
             default:
-                gymPokemon.setHp(getHp() - 5);
+                gymPokemon.setHp(gymPokemon.getHp() - 5);
                 System.out.println(gymPokemon.getName() + " loses 5 hp");
         }
-        System.out.println("The enemy now has an hp of: " + gymPokemon.getHp());
+        System.out.println(gymPokemon.getName() + " now has an hp of: " + gymPokemon.getHp());
     }
 
     public void leaveBlade(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName());
+        System.out.println(pokemon.getName() + " uses leaveblade on " + gymPokemon.getName());
         switch (gymPokemon.getType()) {
             case "electric":
-                gymPokemon.setHp(getHp() - 20);
+                gymPokemon.setHp(gymPokemon.getHp() - 20);
                 System.out.println(gymPokemon.getName() + " loses 20 hp");
+                break;
             case "fire":
-                gymPokemon.setHp(getHp() - 15);
+                gymPokemon.setHp(gymPokemon.getHp() - 15);
                 System.out.println(gymPokemon.getName() + " loses 15 hp");
+                break;
             case "water":
-                gymPokemon.setHp(getHp() - 15);
-                System.out.println(gymPokemon.getName() + " loses 10 hp");
+                gymPokemon.setHp(gymPokemon.getHp() - 15);
+                System.out.println(gymPokemon.getName() + " loses 15 hp");
+                break;
             default:
-                gymPokemon.setHp(getHp() - 5);
+                gymPokemon.setHp(gymPokemon.getHp() - 5);
                 System.out.println(gymPokemon.getName() + " loses 5 hp");
         }
-        System.out.println("The enemy now has an hp of: " + gymPokemon.getHp());
+        System.out.println(gymPokemon.getName() + " now has an hp of: " + gymPokemon.getHp());
     }
 
     public void solarBeam(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName());
+        System.out.println(pokemon.getName() + " uses solarbeam on " + gymPokemon.getName());
         switch (gymPokemon.getType()) {
             case "electric":
-                gymPokemon.setHp(getHp() - 15);
-                System.out.println(gymPokemon.getName() + " loses 20 hp");
-            case "fire":
-                gymPokemon.setHp(getHp() - 10);
+                gymPokemon.setHp(gymPokemon.getHp() - 15);
                 System.out.println(gymPokemon.getName() + " loses 15 hp");
-            case "water":
-                gymPokemon.setHp(getHp() - 10);
+                break;
+            case "fire":
+                gymPokemon.setHp(gymPokemon.getHp() - 10);
                 System.out.println(gymPokemon.getName() + " loses 10 hp");
+                break;
+            case "water":
+                gymPokemon.setHp(gymPokemon.getHp() - 10);
+                System.out.println(gymPokemon.getName() + " loses 10 hp");
+                break;
             default:
-                gymPokemon.setHp(getHp() - 5);
+                gymPokemon.setHp(gymPokemon.getHp() - 5);
                 System.out.println(gymPokemon.getName() + " loses 5 hp");
         }
-        System.out.println("The enemy now has an hp of: " + gymPokemon.getHp());
+        System.out.println(gymPokemon.getName() + " now has an hp of: " + gymPokemon.getHp());
     }
 
     public void leechSeed(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName());
+        System.out.println(pokemon.getName() + " uses leechseed on " + gymPokemon.getName());
         switch (gymPokemon.getType()) {
             case "electric":
-                gymPokemon.setHp(getHp() - 20);
+                gymPokemon.setHp(gymPokemon.getHp() - 20);
                 System.out.println(gymPokemon.getName() + " loses 20 hp");
                 pokemon.setHp(getHp() + 20);
+                break;
             case "fire":
-                gymPokemon.setHp(getHp() - 15);
+                gymPokemon.setHp(gymPokemon.getHp() - 15);
                 System.out.println(gymPokemon.getName() + " loses 15 hp");
                 pokemon.setHp(getHp() + 15);
+                break;
             case "water":
-                gymPokemon.setHp(getHp() - 10);
+                gymPokemon.setHp(gymPokemon.getHp() - 10);
                 System.out.println(gymPokemon.getName() + " loses 10 hp");
                 pokemon.setHp(getHp() + 10);
+                break;
             default:
-                gymPokemon.setHp(getHp() - 5);
+                gymPokemon.setHp(gymPokemon.getHp() - 5);
                 System.out.println(gymPokemon.getName() + " loses 5 hp");
                 pokemon.setHp(getHp() + 5);
         }

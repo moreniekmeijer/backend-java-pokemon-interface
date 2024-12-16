@@ -20,7 +20,9 @@ public interface PokemonGym {
 
     void performAttackPlayer(Pokemon pokemon, Pokemon gymPokemon, String attack);
 
+    void performFeedPlayer(Pokemon pokemon);
+
     void gymOwnerAttacks(Pokemon gymPokemon, Pokemon pokemon);
 
-    void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym);
+    void attackOrChangeOrFeed(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym);
 }

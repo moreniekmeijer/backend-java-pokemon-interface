@@ -1,7 +1,7 @@
 import java.util.List;
 
-public class PokemonGymOwner extends PokemonTrainer{
-    private String town;
+public class PokemonGymOwner extends PokemonTrainer {
+    private final String town;
 
     public PokemonGymOwner(String name, String town, List<Pokemon> pokemons) {
         super(name, pokemons);
